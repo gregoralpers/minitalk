@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galpers <galpers@student.42.fr>            +#+  +:+       +#+        */
+/*   By: galpers <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 13:14:20 by galpers           #+#    #+#             */
-/*   Updated: 2022/03/30 16:33:11 by galpers          ###   ########.fr       */
+/*   Updated: 2022/04/01 12:19:19 by galpers          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ static char	*ft_bit_conversion(char *s, size_t i, size_t j)
 	int		bytes;
 
 	i = ft_strlen(s);
-	result = ft_calloc(i * 8 + 1, sizeof(char));
+	result = ft_calloc(i * 8 + 1, sizeof(unsigned char));
 	if (result == NULL)
 		return (NULL);
 	while (i + 1 != 0)
 	{
-		c = s[i - 1];
+		c = (unsigned char)s[i - 1];
 		bytes = 8;
 		while (bytes > 0)
 		{
